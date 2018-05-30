@@ -1,0 +1,6 @@
+vhdtdtfi -lib work C:/Users/touma/Desktop/lab3/my_nand2.v -lang verilog -prj lab3 -o my_nand2.spl -module my_nand2 -template C:/Xilinx/14.7/ISE_DS/ISE//data/splveri.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3e -w my_nand2.spl C:/Users/touma/Desktop/lab3/my_nand2.sym 
+vhdtdtfi -lib work C:/Users/touma/Desktop/lab3/my_nand2.v -lang verilog -prj lab3 -o my_nand2.spl -module my_nand2 -template C:/Xilinx/14.7/ISE_DS/ISE//data/splveri.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3e -w my_nand2.spl C:/Users/touma/Desktop/lab3/my_nand2.sym 
+vhdtdtfi -lib work C:/Users/touma/Desktop/lab3/my_nand2.v -lang verilog -prj lab3 -o my_nand2.spl -module my_nand2 -template C:/Xilinx/14.7/ISE_DS/ISE//data/splveri.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3e -w my_nand2.spl C:/Users/touma/Desktop/lab3/my_nand2.sym 

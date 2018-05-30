@@ -1,0 +1,4 @@
+vhdtdtfi -lib work C:/Users/touma/Desktop/lab3/negedge_catcher.v -lang verilog -prj lab3 -o negedge_catcher.spl -module negedge_catcher -template C:/Xilinx/14.7/ISE_DS/ISE//data/splveri.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3e -w negedge_catcher.spl C:/Users/touma/Desktop/lab3/negedge_catcher.sym 
+vhdtdtfi -lib work C:/Users/touma/Desktop/lab3/negedge_catcher.v -lang verilog -prj lab3 -o negedge_catcher.spl -module negedge_catcher -template C:/Xilinx/14.7/ISE_DS/ISE//data/splveri.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3e -w negedge_catcher.spl C:/Users/touma/Desktop/lab3/negedge_catcher.sym 

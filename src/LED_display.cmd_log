@@ -1,0 +1,2 @@
+vhdtdtfi -lib work C:/Users/touma/Desktop/lab3/LED_display.v -lang verilog -prj lab3 -o LED_display.spl -module LED_display -template C:/Xilinx/14.7/ISE_DS/ISE//data/splveri.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3e -w LED_display.spl C:/Users/touma/Desktop/lab3/LED_display.sym 

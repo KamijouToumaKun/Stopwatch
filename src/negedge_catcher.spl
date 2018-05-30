@@ -1,0 +1,9 @@
+[Inputs]
+myin
+clk
+[Outputs]
+myout
+[BiDir]
+[ATTRIBUTES]
+VeriModel negedge_catcher
+
