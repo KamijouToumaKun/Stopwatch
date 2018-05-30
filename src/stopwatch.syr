@@ -1,0 +1,649 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.12 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.12 secs
+ 
+--> Reading design: stopwatch.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+	9.1) Device utilization summary
+	9.2) Partition Resource Summary
+	9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "stopwatch.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "stopwatch"
+Output Format                      : NGC
+Target Device                      : xc3s100e-5-cp132
+
+---- Source Options
+Top Module Name                    : stopwatch
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : Yes
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : Yes
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Multiplier Style                   : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 24
+Register Duplication               : YES
+Slice Packing                      : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Yes
+Use Synchronous Set                : Yes
+Use Synchronous Reset              : Yes
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+Verilog 2001                       : YES
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling verilog file "myjk_neg_verilog.v" in library work
+Compiling verilog file "negedge_catcher.v" in library work
+Module <myjk_neg_verilog> compiled
+Compiling verilog file "LED_display.v" in library work
+Module <negedge_catcher> compiled
+WARNING:HDLCompilers:21 - "LED_display.v" line 32 Zero width on based number ignored
+WARNING:HDLCompilers:21 - "LED_display.v" line 36 Zero width on based number ignored
+WARNING:HDLCompilers:21 - "LED_display.v" line 38 Zero width on based number ignored
+Compiling verilog file "clk_100ms.v" in library work
+Module <LED_display> compiled
+Compiling verilog file "bin2bcd.v" in library work
+Module <clk_100ms> compiled
+Compiling verilog file "bcd2seg.v" in library work
+Module <bin2bcd> compiled
+Compiling verilog file "an_gen.v" in library work
+Module <bcd2seg> compiled
+Compiling verilog file "stopwatch.vf" in library work
+Module <an_gen> compiled
+Module <my163_MUSER_stopwatch> compiled
+Module <stopwatch> compiled
+No errors in compilation
+Analysis of file <"stopwatch.prj"> succeeded.
+ 
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for module <stopwatch> in library <work>.
+
+Analyzing hierarchy for module <an_gen> in library <work>.
+
+Analyzing hierarchy for module <bcd2seg> in library <work>.
+
+Analyzing hierarchy for module <bin2bcd> in library <work>.
+
+Analyzing hierarchy for module <clk_100ms> in library <work> with parameters.
+	N = "00000000001001100010010110100000"
+	WIDTH = "00000000000000000000000000010110"
+
+Analyzing hierarchy for module <LED_display> in library <work>.
+
+Analyzing hierarchy for module <my163_MUSER_stopwatch> in library <work>.
+
+Analyzing hierarchy for module <negedge_catcher> in library <work>.
+
+Analyzing hierarchy for module <myjk_neg_verilog> in library <work>.
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing top module <stopwatch>.
+Module <stopwatch> is correct for synthesis.
+ 
+Analyzing module <an_gen> in library <work>.
+Module <an_gen> is correct for synthesis.
+ 
+Analyzing module <bcd2seg> in library <work>.
+Module <bcd2seg> is correct for synthesis.
+ 
+Analyzing module <bin2bcd> in library <work>.
+Module <bin2bcd> is correct for synthesis.
+ 
+Analyzing module <clk_100ms> in library <work>.
+	N = 32'sb00000000001001100010010110100000
+	WIDTH = 32'sb00000000000000000000000000010110
+Module <clk_100ms> is correct for synthesis.
+ 
+Analyzing module <LED_display> in library <work>.
+Module <LED_display> is correct for synthesis.
+ 
+Analyzing module <my163_MUSER_stopwatch> in library <work>.
+Module <my163_MUSER_stopwatch> is correct for synthesis.
+ 
+Analyzing module <myjk_neg_verilog> in library <work>.
+Module <myjk_neg_verilog> is correct for synthesis.
+ 
+Analyzing module <negedge_catcher> in library <work>.
+Module <negedge_catcher> is correct for synthesis.
+ 
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <an_gen>.
+    Related source file is "an_gen.v".
+WARNING:Xst:646 - Signal <clk_500Hz> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+    Found 4-bit register for signal <an>.
+    Found 17-bit up counter for signal <counter>.
+    Summary:
+	inferred   1 Counter(s).
+	inferred   4 D-type flip-flop(s).
+Unit <an_gen> synthesized.
+
+
+Synthesizing Unit <bcd2seg>.
+    Related source file is "bcd2seg.v".
+    Found 16x7-bit ROM for signal <Y_r>.
+    Summary:
+	inferred   1 ROM(s).
+Unit <bcd2seg> synthesized.
+
+
+Synthesizing Unit <bin2bcd>.
+    Related source file is "bin2bcd.v".
+Unit <bin2bcd> synthesized.
+
+
+Synthesizing Unit <clk_100ms>.
+    Related source file is "clk_100ms.v".
+    Found 1-bit register for signal <clk_out>.
+    Found 23-bit up counter for signal <counter>.
+    Summary:
+	inferred   1 Counter(s).
+	inferred   1 D-type flip-flop(s).
+Unit <clk_100ms> synthesized.
+
+
+Synthesizing Unit <LED_display>.
+    Related source file is "LED_display.v".
+WARNING:Xst:737 - Found 8-bit latch for signal <seg>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+INFO:Xst:2371 - HDL ADVISOR - Logic functions respectively driving the data and gate enable inputs of this latch share common terms. This situation will potentially lead to setup/hold violations and, as a result, to simulation problems. This situation may come from an incomplete case statement (all selector values are not covered). You should carefully review if it was in your intentions to describe such a latch.
+Unit <LED_display> synthesized.
+
+
+Synthesizing Unit <negedge_catcher>.
+    Related source file is "negedge_catcher.v".
+WARNING:Xst:647 - Input <clk> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:737 - Found 1-bit latch for signal <myout>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+Unit <negedge_catcher> synthesized.
+
+
+Synthesizing Unit <myjk_neg_verilog>.
+    Related source file is "myjk_neg_verilog.v".
+    Found 1-bit register for signal <invQ>.
+    Found 1-bit register for signal <Q>.
+    Summary:
+	inferred   2 D-type flip-flop(s).
+Unit <myjk_neg_verilog> synthesized.
+
+
+Synthesizing Unit <my163_MUSER_stopwatch>.
+    Related source file is "stopwatch.vf".
+Unit <my163_MUSER_stopwatch> synthesized.
+
+
+Synthesizing Unit <stopwatch>.
+    Related source file is "stopwatch.vf".
+Unit <stopwatch> synthesized.
+
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# ROMs                                                 : 4
+ 16x7-bit ROM                                          : 4
+# Counters                                             : 2
+ 17-bit up counter                                     : 1
+ 23-bit up counter                                     : 1
+# Registers                                            : 37
+ 1-bit register                                        : 37
+# Latches                                              : 2
+ 1-bit latch                                           : 1
+ 8-bit latch                                           : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# ROMs                                                 : 4
+ 16x7-bit ROM                                          : 4
+# Counters                                             : 2
+ 17-bit up counter                                     : 1
+ 23-bit up counter                                     : 1
+# Registers                                            : 37
+ Flip-Flops                                            : 37
+# Latches                                              : 2
+ 1-bit latch                                           : 1
+ 8-bit latch                                           : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+
+Optimizing unit <stopwatch> ...
+
+Optimizing unit <LED_display> ...
+
+Optimizing unit <my163_MUSER_stopwatch> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block stopwatch, actual ratio is 7.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 77
+ Flip-Flops                                            : 77
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : stopwatch.ngr
+Top Level Output File Name         : stopwatch
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : No
+
+Design Statistics
+# IOs                              : 15
+
+Cell Usage :
+# BELS                             : 306
+#      AND2                        : 27
+#      AND3                        : 24
+#      AND4                        : 8
+#      AND5                        : 8
+#      BUF                         : 4
+#      GND                         : 1
+#      INV                         : 21
+#      LUT1                        : 38
+#      LUT2                        : 3
+#      LUT3                        : 21
+#      LUT4                        : 58
+#      MUXCY                       : 44
+#      MUXF5                       : 8
+#      VCC                         : 1
+#      XORCY                       : 40
+# FlipFlops/Latches                : 86
+#      FD                          : 21
+#      FD_1                        : 16
+#      FDE                         : 1
+#      FDR                         : 23
+#      FDR_1                       : 16
+#      LD                          : 8
+#      LDE                         : 1
+# Clock Buffers                    : 3
+#      BUFG                        : 2
+#      BUFGP                       : 1
+# IO Buffers                       : 14
+#      IBUF                        : 2
+#      OBUF                        : 12
+# Logical                          : 45
+#      NAND2                       : 5
+#      NOR2                        : 32
+#      NOR3                        : 4
+#      NOR5                        : 4
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 3s100ecp132-5 
+
+ Number of Slices:                       66  out of    960     6%  
+ Number of Slice Flip Flops:             78  out of   1920     4%  
+ Number of 4 input LUTs:                141  out of   1920     7%  
+ Number of IOs:                          15
+ Number of bonded IOBs:                  15  out of     83    18%  
+    IOB Flip Flops:                       8
+ Number of GCLKs:                         3  out of     24    12%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+---------------------------------------------------------------------------+------------------------------------+-------+
+Clock Signal                                                               | Clock buffer(FF name)              | Load  |
+---------------------------------------------------------------------------+------------------------------------+-------+
+an_gen_instance/counter_16                                                 | NONE(an_gen_instance/an_0)         | 4     |
+mclk                                                                       | BUFGP                              | 41    |
+btn1                                                                       | IBUF+BUFG                          | 1     |
+LED_display_instance/seg_mux0000<7>(LED_display_instance/seg_mux0000<7>1:O)| NONE(*)(LED_display_instance/seg_7)| 8     |
+clk_100ms_instance/clk_out1                                                | BUFG                               | 32    |
+---------------------------------------------------------------------------+------------------------------------+-------+
+(*) This 1 clock signal(s) are generated by combinatorial logic,
+and XST is not able to identify which are the primary clock signals.
+Please use the CLOCK_SIGNAL constraint to specify the clock signal(s) generated by combinatorial logic.
+INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -5
+
+   Minimum period: 11.634ns (Maximum Frequency: 85.953MHz)
+   Minimum input arrival time before clock: 12.004ns
+   Maximum output required time after clock: 4.747ns
+   Maximum combinational path delay: No path found
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'an_gen_instance/counter_16'
+  Clock period: 1.846ns (frequency: 541.653MHz)
+  Total number of paths / destination ports: 4 / 4
+-------------------------------------------------------------------------
+Delay:               1.846ns (Levels of Logic = 0)
+  Source:            an_gen_instance/an_3 (FF)
+  Destination:       an_gen_instance/an_0 (FF)
+  Source Clock:      an_gen_instance/counter_16 rising
+  Destination Clock: an_gen_instance/counter_16 rising
+
+  Data Path: an_gen_instance/an_3 to an_gen_instance/an_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q              24   0.514   1.064  an_gen_instance/an_3 (an_gen_instance/an_3)
+     FD:D                      0.268          an_gen_instance/an_0
+    ----------------------------------------
+    Total                      1.846ns (0.782ns logic, 1.064ns route)
+                                       (42.4% logic, 57.6% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'mclk'
+  Clock period: 4.416ns (frequency: 226.467MHz)
+  Total number of paths / destination ports: 982 / 65
+-------------------------------------------------------------------------
+Delay:               4.416ns (Levels of Logic = 7)
+  Source:            clk_100ms_instance/counter_8 (FF)
+  Destination:       clk_100ms_instance/counter_0 (FF)
+  Source Clock:      mclk rising
+  Destination Clock: mclk rising
+
+  Data Path: clk_100ms_instance/counter_8 to clk_100ms_instance/counter_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q              2   0.514   0.532  clk_100ms_instance/counter_8 (clk_100ms_instance/counter_8)
+     LUT3:I0->O            1   0.612   0.000  clk_100ms_instance/counter_cmp_eq0000_wg_lut<0> (clk_100ms_instance/counter_cmp_eq0000_wg_lut<0>)
+     MUXCY:S->O            1   0.404   0.000  clk_100ms_instance/counter_cmp_eq0000_wg_cy<0> (clk_100ms_instance/counter_cmp_eq0000_wg_cy<0>)
+     MUXCY:CI->O           1   0.052   0.000  clk_100ms_instance/counter_cmp_eq0000_wg_cy<1> (clk_100ms_instance/counter_cmp_eq0000_wg_cy<1>)
+     MUXCY:CI->O           1   0.052   0.000  clk_100ms_instance/counter_cmp_eq0000_wg_cy<2> (clk_100ms_instance/counter_cmp_eq0000_wg_cy<2>)
+     MUXCY:CI->O           1   0.052   0.000  clk_100ms_instance/counter_cmp_eq0000_wg_cy<3> (clk_100ms_instance/counter_cmp_eq0000_wg_cy<3>)
+     MUXCY:CI->O           1   0.052   0.000  clk_100ms_instance/counter_cmp_eq0000_wg_cy<4> (clk_100ms_instance/counter_cmp_eq0000_wg_cy<4>)
+     MUXCY:CI->O          24   0.289   1.064  clk_100ms_instance/counter_cmp_eq0000_wg_cy<5> (clk_100ms_instance/counter_cmp_eq0000)
+     FDR:R                     0.795          clk_100ms_instance/counter_0
+    ----------------------------------------
+    Total                      4.416ns (2.820ns logic, 1.596ns route)
+                                       (63.9% logic, 36.1% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'btn1'
+  Clock period: 2.363ns (frequency: 423.182MHz)
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Delay:               2.363ns (Levels of Logic = 1)
+  Source:            negedge_instance/myout (LATCH)
+  Destination:       negedge_instance/myout (LATCH)
+  Source Clock:      btn1 falling
+  Destination Clock: btn1 falling
+
+  Data Path: negedge_instance/myout to negedge_instance/myout
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDE:G->Q              5   0.588   0.538  negedge_instance/myout (negedge_instance/myout)
+     INV:I->O              1   0.612   0.357  negedge_instance/myout_not00011_INV_0 (negedge_instance/myout_not0001)
+     LDE:D                     0.268          negedge_instance/myout
+    ----------------------------------------
+    Total                      2.363ns (1.468ns logic, 0.895ns route)
+                                       (62.1% logic, 37.9% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk_100ms_instance/clk_out1'
+  Clock period: 11.634ns (frequency: 85.953MHz)
+  Total number of paths / destination ports: 800 / 32
+-------------------------------------------------------------------------
+Delay:               11.634ns (Levels of Logic = 9)
+  Source:            my163_100ms/JK1/Q (FF)
+  Destination:       my163_100ms/JK1/invQ (FF)
+  Source Clock:      clk_100ms_instance/clk_out1 rising
+  Destination Clock: clk_100ms_instance/clk_out1 rising
+
+  Data Path: my163_100ms/JK1/Q to my163_100ms/JK1/invQ
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD_1:C->Q            16   0.514   0.879  my163_100ms/JK1/Q (my163_100ms/JK1/Q)
+     AND2:I1->O            2   0.612   0.380  XLXI_82 (XLXN_187)
+     INV:I->O              1   0.612   0.357  XLXI_81 (XLXN_18)
+     NAND2:I0->O           9   0.612   0.697  my163_100ms/XLXI_79 (my163_100ms/XLXN_277)
+     NOR3:I2->O            8   0.612   0.643  my163_100ms/XLXI_152 (my163_100ms/XLXN_281)
+     AND2:I1->O            1   0.612   0.357  my163_100ms/XLXI_63 (my163_100ms/XLXN_20)
+     NOR2:I0->O            2   0.612   0.380  my163_100ms/XLXI_64 (my163_100ms/XLXN_22)
+     AND2:I0->O            1   0.612   0.357  my163_100ms/XLXI_32 (my163_100ms/XLXN_9)
+     NOR2:I0->O            1   0.612   0.387  my163_100ms/XLXI_33 (my163_100ms/XLXN_18)
+     LUT3:I2->O            2   0.612   0.380  my163_100ms/JK1/Q_or00001 (my163_100ms/JK1/Q_or0000)
+     FDR_1:R                   0.795          my163_100ms/JK1/invQ
+    ----------------------------------------
+    Total                     11.634ns (6.817ns logic, 4.817ns route)
+                                       (58.6% logic, 41.4% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'btn1'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              2.938ns (Levels of Logic = 2)
+  Source:            btn1 (PAD)
+  Destination:       negedge_instance/myout (LATCH)
+  Destination Clock: btn1 falling
+
+  Data Path: btn1 to negedge_instance/myout
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             2   1.106   0.380  btn1_IBUF (btn1_IBUF1)
+     INV:I->O              1   0.612   0.357  negedge_instance/myout_0_not00001_INV_0 (negedge_instance/myout_0_not0000)
+     LDE:GE                    0.483          negedge_instance/myout
+    ----------------------------------------
+    Total                      2.938ns (2.201ns logic, 0.737ns route)
+                                       (74.9% logic, 25.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk_100ms_instance/clk_out1'
+  Total number of paths / destination ports: 256 / 32
+-------------------------------------------------------------------------
+Offset:              12.004ns (Levels of Logic = 10)
+  Source:            btn0 (PAD)
+  Destination:       my163_100ms/JK1/invQ (FF)
+  Destination Clock: clk_100ms_instance/clk_out1 rising
+
+  Data Path: btn0 to my163_100ms/JK1/invQ
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             1   1.106   0.357  btn0_IBUF (btn0_IBUF)
+     INV:I->O              4   0.612   0.499  XLXI_16 (XLXN_116)
+     BUF:I->O              5   0.612   0.538  my163_100ms/XLXI_78 (my163_100ms/XLXN_55)
+     NAND2:I1->O           9   0.612   0.697  my163_100ms/XLXI_79 (my163_100ms/XLXN_277)
+     NOR3:I2->O            8   0.612   0.643  my163_100ms/XLXI_152 (my163_100ms/XLXN_281)
+     AND2:I1->O            1   0.612   0.357  my163_100ms/XLXI_63 (my163_100ms/XLXN_20)
+     NOR2:I0->O            2   0.612   0.380  my163_100ms/XLXI_64 (my163_100ms/XLXN_22)
+     AND2:I0->O            1   0.612   0.357  my163_100ms/XLXI_32 (my163_100ms/XLXN_9)
+     NOR2:I0->O            1   0.612   0.387  my163_100ms/XLXI_33 (my163_100ms/XLXN_18)
+     LUT3:I2->O            2   0.612   0.380  my163_100ms/JK1/Q_or00001 (my163_100ms/JK1/Q_or0000)
+     FDR_1:R                   0.795          my163_100ms/JK1/invQ
+    ----------------------------------------
+    Total                     12.004ns (7.409ns logic, 4.595ns route)
+                                       (61.7% logic, 38.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'an_gen_instance/counter_16'
+  Total number of paths / destination ports: 4 / 4
+-------------------------------------------------------------------------
+Offset:              4.747ns (Levels of Logic = 1)
+  Source:            an_gen_instance/an_3 (FF)
+  Destination:       an<3> (PAD)
+  Source Clock:      an_gen_instance/counter_16 rising
+
+  Data Path: an_gen_instance/an_3 to an<3>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q              24   0.514   1.064  an_gen_instance/an_3 (an_gen_instance/an_3)
+     OBUF:I->O                 3.169          an_3_OBUF (an<3>)
+    ----------------------------------------
+    Total                      4.747ns (3.683ns logic, 1.064ns route)
+                                       (77.6% logic, 22.4% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'LED_display_instance/seg_mux0000<7>'
+  Total number of paths / destination ports: 8 / 8
+-------------------------------------------------------------------------
+Offset:              4.114ns (Levels of Logic = 1)
+  Source:            LED_display_instance/seg_7 (LATCH)
+  Destination:       seg<7> (PAD)
+  Source Clock:      LED_display_instance/seg_mux0000<7> falling
+
+  Data Path: LED_display_instance/seg_7 to seg<7>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LD:G->Q               1   0.588   0.357  LED_display_instance/seg_7 (LED_display_instance/seg_7)
+     OBUF:I->O                 3.169          seg_7_OBUF (seg<7>)
+    ----------------------------------------
+    Total                      4.114ns (3.757ns logic, 0.357ns route)
+                                       (91.3% logic, 8.7% route)
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 6.00 secs
+Total CPU time to Xst completion: 6.72 secs
+ 
+--> 
+
+Total memory usage is 264360 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    7 (   0 filtered)
+Number of infos    :    2 (   0 filtered)
+

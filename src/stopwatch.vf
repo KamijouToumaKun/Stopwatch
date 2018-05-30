@@ -1,0 +1,398 @@
+////////////////////////////////////////////////////////////////////////////////
+// Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+////////////////////////////////////////////////////////////////////////////////
+//   ____  ____ 
+//  /   /\/   / 
+// /___/  \  /    Vendor: Xilinx 
+// \   \   \/     Version : 14.7
+//  \   \         Application : sch2hdl
+//  /   /         Filename : stopwatch.vf
+// /___/   /\     Timestamp : 05/21/2018 01:17:13
+// \   \  /  \ 
+//  \___\/\___\ 
+//
+//Command: sch2hdl -intstyle ise -family spartan3e -verilog C:/Users/touma/Desktop/lab3/stopwatch.vf -w C:/Users/touma/Desktop/lab3/stopwatch.sch
+//Design Name: stopwatch
+//Device: spartan3e
+//Purpose:
+//    This verilog netlist is translated from an ECS schematic.It can be 
+//    synthesized and simulated, but it should not be modified. 
+//
+`timescale 1ns / 1ps
+
+module my163_MUSER_stopwatch(CLEAR, 
+                             CLOCK, 
+                             DATAA, 
+                             DATAB, 
+                             DATAC, 
+                             DATAD, 
+                             ENP, 
+                             ENT, 
+                             LOAD, 
+                             C, 
+                             QA, 
+                             QB, 
+                             QC, 
+                             QD);
+
+    input CLEAR;
+    input CLOCK;
+    input DATAA;
+    input DATAB;
+    input DATAC;
+    input DATAD;
+    input ENP;
+    input ENT;
+    input LOAD;
+   output C;
+   output QA;
+   output QB;
+   output QC;
+   output QD;
+   
+   wire XLXN_4;
+   wire XLXN_7;
+   wire XLXN_9;
+   wire XLXN_18;
+   wire XLXN_19;
+   wire XLXN_20;
+   wire XLXN_22;
+   wire XLXN_23;
+   wire XLXN_24;
+   wire XLXN_29;
+   wire XLXN_32;
+   wire XLXN_33;
+   wire XLXN_35;
+   wire XLXN_38;
+   wire XLXN_46;
+   wire XLXN_55;
+   wire XLXN_277;
+   wire XLXN_278;
+   wire XLXN_279;
+   wire XLXN_281;
+   wire XLXN_284;
+   wire XLXN_285;
+   wire XLXN_287;
+   wire XLXN_288;
+   wire XLXN_289;
+   wire XLXN_290;
+   wire XLXN_291;
+   wire XLXN_295;
+   wire XLXN_301;
+   wire XLXN_302;
+   wire XLXN_307;
+   wire XLXN_316;
+   wire XLXN_317;
+   wire XLXN_318;
+   wire QA_DUMMY;
+   wire QB_DUMMY;
+   wire QC_DUMMY;
+   wire QD_DUMMY;
+   
+   assign QA = QA_DUMMY;
+   assign QB = QB_DUMMY;
+   assign QC = QC_DUMMY;
+   assign QD = QD_DUMMY;
+   myjk_neg_verilog  JK1 (.invCP(XLXN_4), 
+                         .invJ(XLXN_22), 
+                         .invK(XLXN_18), 
+                         .invQ(XLXN_29), 
+                         .Q(QA_DUMMY));
+   myjk_neg_verilog  JK2 (.invCP(XLXN_4), 
+                         .invJ(XLXN_38), 
+                         .invK(XLXN_32), 
+                         .invQ(XLXN_46), 
+                         .Q(QB_DUMMY));
+   myjk_neg_verilog  JK3 (.invCP(XLXN_4), 
+                         .invJ(XLXN_295), 
+                         .invK(XLXN_291), 
+                         .invQ(XLXN_301), 
+                         .Q(QC_DUMMY));
+   myjk_neg_verilog  JK4 (.invCP(XLXN_4), 
+                         .invJ(XLXN_318), 
+                         .invK(XLXN_302), 
+                         .invQ(XLXN_307), 
+                         .Q(QD_DUMMY));
+   INV  XLXI_27 (.I(CLOCK), 
+                .O(XLXN_4));
+   AND2  XLXI_31 (.I0(XLXN_281), 
+                 .I1(QA_DUMMY), 
+                 .O(XLXN_7));
+   AND2  XLXI_32 (.I0(XLXN_22), 
+                 .I1(XLXN_277), 
+                 .O(XLXN_9));
+   NOR2  XLXI_33 (.I0(XLXN_9), 
+                 .I1(XLXN_7), 
+                 .O(XLXN_18));
+   AND3  XLXI_62 (.I0(XLXN_277), 
+                 .I1(XLXN_55), 
+                 .I2(DATAA), 
+                 .O(XLXN_19));
+   AND2  XLXI_63 (.I0(XLXN_29), 
+                 .I1(XLXN_281), 
+                 .O(XLXN_20));
+   NOR2  XLXI_64 (.I0(XLXN_20), 
+                 .I1(XLXN_19), 
+                 .O(XLXN_22));
+   AND3  XLXI_65 (.I0(XLXN_281), 
+                 .I1(QA_DUMMY), 
+                 .I2(QB_DUMMY), 
+                 .O(XLXN_23));
+   NOR2  XLXI_66 (.I0(XLXN_24), 
+                 .I1(XLXN_23), 
+                 .O(XLXN_32));
+   AND2  XLXI_67 (.I0(XLXN_38), 
+                 .I1(XLXN_277), 
+                 .O(XLXN_24));
+   AND3  XLXI_73 (.I0(XLXN_277), 
+                 .I1(XLXN_55), 
+                 .I2(DATAB), 
+                 .O(XLXN_33));
+   NOR2  XLXI_74 (.I0(XLXN_35), 
+                 .I1(XLXN_33), 
+                 .O(XLXN_38));
+   AND3  XLXI_76 (.I0(XLXN_46), 
+                 .I1(QA_DUMMY), 
+                 .I2(XLXN_281), 
+                 .O(XLXN_35));
+   BUF  XLXI_78 (.I(CLEAR), 
+                .O(XLXN_55));
+   NAND2  XLXI_79 (.I0(LOAD), 
+                  .I1(XLXN_55), 
+                  .O(XLXN_277));
+   INV  XLXI_80 (.I(ENP), 
+                .O(XLXN_278));
+   INV  XLXI_81 (.I(ENT), 
+                .O(XLXN_279));
+   NOR3  XLXI_152 (.I0(XLXN_279), 
+                  .I1(XLXN_278), 
+                  .I2(XLXN_277), 
+                  .O(XLXN_281));
+   AND4  XLXI_153 (.I0(XLXN_281), 
+                  .I1(QB_DUMMY), 
+                  .I2(QA_DUMMY), 
+                  .I3(QC_DUMMY), 
+                  .O(XLXN_284));
+   AND2  XLXI_154 (.I0(XLXN_295), 
+                  .I1(XLXN_277), 
+                  .O(XLXN_285));
+   AND3  XLXI_155 (.I0(XLXN_277), 
+                  .I1(XLXN_55), 
+                  .I2(DATAC), 
+                  .O(XLXN_287));
+   AND4  XLXI_156 (.I0(XLXN_301), 
+                  .I1(QB_DUMMY), 
+                  .I2(QA_DUMMY), 
+                  .I3(XLXN_281), 
+                  .O(XLXN_288));
+   AND5  XLXI_157 (.I0(XLXN_281), 
+                  .I1(QC_DUMMY), 
+                  .I2(QB_DUMMY), 
+                  .I3(QA_DUMMY), 
+                  .I4(QD_DUMMY), 
+                  .O(XLXN_289));
+   AND2  XLXI_158 (.I0(XLXN_318), 
+                  .I1(XLXN_277), 
+                  .O(XLXN_290));
+   AND3  XLXI_159 (.I0(XLXN_277), 
+                  .I1(XLXN_55), 
+                  .I2(DATAD), 
+                  .O(XLXN_316));
+   AND5  XLXI_160 (.I0(XLXN_307), 
+                  .I1(QC_DUMMY), 
+                  .I2(QB_DUMMY), 
+                  .I3(QA_DUMMY), 
+                  .I4(XLXN_281), 
+                  .O(XLXN_317));
+   NOR2  XLXI_161 (.I0(XLXN_285), 
+                  .I1(XLXN_284), 
+                  .O(XLXN_291));
+   NOR2  XLXI_162 (.I0(XLXN_288), 
+                  .I1(XLXN_287), 
+                  .O(XLXN_295));
+   NOR2  XLXI_163 (.I0(XLXN_290), 
+                  .I1(XLXN_289), 
+                  .O(XLXN_302));
+   NOR2  XLXI_164 (.I0(XLXN_317), 
+                  .I1(XLXN_316), 
+                  .O(XLXN_318));
+   NOR5  XLXI_166 (.I0(XLXN_279), 
+                  .I1(XLXN_29), 
+                  .I2(XLXN_46), 
+                  .I3(XLXN_301), 
+                  .I4(XLXN_307), 
+                  .O(C));
+endmodule
+`timescale 1ns / 1ps
+
+module stopwatch(btn0, 
+                 btn1, 
+                 mclk, 
+                 an, 
+                 seg);
+
+    input btn0;
+    input btn1;
+    input mclk;
+   output [3:0] an;
+   output [7:0] seg;
+   
+   wire XLXN_8;
+   wire XLXN_18;
+   wire XLXN_90;
+   wire XLXN_93;
+   wire XLXN_107;
+   wire XLXN_110;
+   wire XLXN_115;
+   wire XLXN_116;
+   wire XLXN_120;
+   wire XLXN_123;
+   wire XLXN_124;
+   wire XLXN_125;
+   wire XLXN_126;
+   wire [3:0] XLXN_127;
+   wire [3:0] XLXN_131;
+   wire [3:0] XLXN_132;
+   wire [3:0] XLXN_133;
+   wire XLXN_139;
+   wire XLXN_140;
+   wire XLXN_141;
+   wire XLXN_142;
+   wire XLXN_146;
+   wire XLXN_147;
+   wire XLXN_148;
+   wire XLXN_149;
+   wire XLXN_155;
+   wire XLXN_156;
+   wire XLXN_157;
+   wire XLXN_158;
+   wire [6:0] XLXN_164;
+   wire [6:0] XLXN_165;
+   wire [6:0] XLXN_166;
+   wire [6:0] XLXN_167;
+   wire XLXN_187;
+   wire XLXN_188;
+   wire XLXN_189;
+   wire [3:0] an_DUMMY;
+   
+   assign an[3:0] = an_DUMMY[3:0];
+   an_gen  an_gen_instance (.mclk(mclk), 
+                           .an(an_DUMMY[3:0]));
+   bcd2seg  bcd2seg_1min (.A(XLXN_133[3:0]), 
+                         .Y(XLXN_167[6:0]));
+   bcd2seg  bcd2seg_1s (.A(XLXN_131[3:0]), 
+                       .Y(XLXN_165[6:0]));
+   bcd2seg  bcd2seg_10s (.A(XLXN_132[3:0]), 
+                        .Y(XLXN_166[6:0]));
+   bcd2seg  bcd2seg_100ms (.A(XLXN_127[3:0]), 
+                          .Y(XLXN_164[6:0]));
+   bin2bcd  bin2bcd_1min (.A(XLXN_155), 
+                         .B(XLXN_156), 
+                         .C(XLXN_157), 
+                         .D(XLXN_158), 
+                         .DCBA(XLXN_133[3:0]));
+   bin2bcd  bin2bcd_1s (.A(XLXN_139), 
+                       .B(XLXN_140), 
+                       .C(XLXN_141), 
+                       .D(XLXN_142), 
+                       .DCBA(XLXN_131[3:0]));
+   bin2bcd  bin2bcd_10s (.A(XLXN_146), 
+                        .B(XLXN_147), 
+                        .C(XLXN_148), 
+                        .D(XLXN_149), 
+                        .DCBA(XLXN_132[3:0]));
+   bin2bcd  bin2bcd_100ms (.A(XLXN_123), 
+                          .B(XLXN_124), 
+                          .C(XLXN_125), 
+                          .D(XLXN_126), 
+                          .DCBA(XLXN_127[3:0]));
+   clk_100ms  clk_100ms_instance (.clk(mclk), 
+                                 .clk_out(XLXN_120));
+   LED_display  LED_display_instance (.an(an_DUMMY[3:0]), 
+                                     .seg0(XLXN_167[6:0]), 
+                                     .seg1(XLXN_166[6:0]), 
+                                     .seg2(XLXN_165[6:0]), 
+                                     .seg3(XLXN_164[6:0]), 
+                                     .seg(seg[7:0]));
+   my163_MUSER_stopwatch  my163_1min (.CLEAR(XLXN_116), 
+                                     .CLOCK(XLXN_120), 
+                                     .DATAA(XLXN_115), 
+                                     .DATAB(XLXN_115), 
+                                     .DATAC(XLXN_115), 
+                                     .DATAD(XLXN_115), 
+                                     .ENP(XLXN_107), 
+                                     .ENT(XLXN_189), 
+                                     .LOAD(XLXN_110), 
+                                     .C(), 
+                                     .QA(XLXN_155), 
+                                     .QB(XLXN_156), 
+                                     .QC(XLXN_157), 
+                                     .QD(XLXN_158));
+   my163_MUSER_stopwatch  my163_1s (.CLEAR(XLXN_116), 
+                                   .CLOCK(XLXN_120), 
+                                   .DATAA(XLXN_115), 
+                                   .DATAB(XLXN_115), 
+                                   .DATAC(XLXN_115), 
+                                   .DATAD(XLXN_115), 
+                                   .ENP(XLXN_107), 
+                                   .ENT(XLXN_187), 
+                                   .LOAD(XLXN_90), 
+                                   .C(), 
+                                   .QA(XLXN_139), 
+                                   .QB(XLXN_140), 
+                                   .QC(XLXN_141), 
+                                   .QD(XLXN_142));
+   my163_MUSER_stopwatch  my163_10s (.CLEAR(XLXN_116), 
+                                    .CLOCK(XLXN_120), 
+                                    .DATAA(XLXN_115), 
+                                    .DATAB(XLXN_115), 
+                                    .DATAC(XLXN_115), 
+                                    .DATAD(XLXN_115), 
+                                    .ENP(XLXN_107), 
+                                    .ENT(XLXN_188), 
+                                    .LOAD(XLXN_93), 
+                                    .C(), 
+                                    .QA(XLXN_146), 
+                                    .QB(XLXN_147), 
+                                    .QC(XLXN_148), 
+                                    .QD(XLXN_149));
+   my163_MUSER_stopwatch  my163_100ms (.CLEAR(XLXN_116), 
+                                      .CLOCK(XLXN_120), 
+                                      .DATAA(XLXN_115), 
+                                      .DATAB(XLXN_115), 
+                                      .DATAC(XLXN_115), 
+                                      .DATAD(XLXN_115), 
+                                      .ENP(XLXN_107), 
+                                      .ENT(XLXN_8), 
+                                      .LOAD(XLXN_18), 
+                                      .C(), 
+                                      .QA(XLXN_123), 
+                                      .QB(XLXN_124), 
+                                      .QC(XLXN_125), 
+                                      .QD(XLXN_126));
+   negedge_catcher  negedge_instance (.clk(mclk), 
+                                     .myin(btn1), 
+                                     .myout(XLXN_107));
+   GND  XLXI_3 (.G(XLXN_115));
+   VCC  XLXI_7 (.P(XLXN_8));
+   INV  XLXI_16 (.I(btn0), 
+                .O(XLXN_116));
+   NAND2  XLXI_41 (.I0(XLXN_158), 
+                  .I1(XLXN_156), 
+                  .O(XLXN_110));
+   INV  XLXI_81 (.I(XLXN_187), 
+                .O(XLXN_18));
+   AND2  XLXI_82 (.I0(XLXN_126), 
+                 .I1(XLXN_123), 
+                 .O(XLXN_187));
+   INV  XLXI_83 (.I(XLXN_188), 
+                .O(XLXN_90));
+   AND2  XLXI_84 (.I0(XLXN_142), 
+                 .I1(XLXN_140), 
+                 .O(XLXN_188));
+   AND2  XLXI_86 (.I0(XLXN_148), 
+                 .I1(XLXN_147), 
+                 .O(XLXN_189));
+   INV  XLXI_87 (.I(XLXN_189), 
+                .O(XLXN_93));
+endmodule

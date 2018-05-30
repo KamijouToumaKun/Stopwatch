@@ -1,0 +1,2 @@
+sch2sym -intstyle ise -family spartan3e -w -refsym my163 C:/Users/touma/Desktop/lab3/my163.sch C:/Users/touma/Desktop/lab3/my163.sym 
+sch2hdl -intstyle ise -family spartan3e -verilog my163_drc.vf -w C:/Users/touma/Desktop/lab3/my163.sch 

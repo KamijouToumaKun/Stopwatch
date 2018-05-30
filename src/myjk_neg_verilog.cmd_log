@@ -1,0 +1,16 @@
+vhdtdtfi -lib work C:/Users/touma/Desktop/lab3/myjk_neg_verilog.v -lang verilog -prj lab3 -o myjk_neg_verilog.spl -module myjk_neg_verilog -template C:/Xilinx/14.7/ISE_DS/ISE//data/splveri.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3e -w myjk_neg_verilog.spl C:/Users/touma/Desktop/lab3/myjk_neg_verilog.sym 
+vhdtdtfi -lib work C:/Users/touma/Desktop/lab3/myjk_neg_verilog.v -lang verilog -prj lab3 -o myjk_neg_verilog.spl -module myjk_neg_verilog -template C:/Xilinx/14.7/ISE_DS/ISE//data/splveri.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3e -w myjk_neg_verilog.spl C:/Users/touma/Desktop/lab3/myjk_neg_verilog.sym 
+vhdtdtfi -lib work C:/Users/touma/Desktop/lab3/myjk_neg_verilog.v -lang verilog -prj lab3 -o myjk_neg_verilog.spl -module myjk_neg_verilog -template C:/Xilinx/14.7/ISE_DS/ISE//data/splveri.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3e -w myjk_neg_verilog.spl C:/Users/touma/Desktop/lab3/myjk_neg_verilog.sym 
+vhdtdtfi -lib work C:/Users/touma/Desktop/lab3/myjk_neg_verilog.v -lang verilog -prj lab3 -o myjk_neg_verilog.spl -module myjk_neg_verilog -template C:/Xilinx/14.7/ISE_DS/ISE//data/splveri.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3e -w myjk_neg_verilog.spl C:/Users/touma/Desktop/lab3/myjk_neg_verilog.sym 
+vhdtdtfi -lib work C:/Users/touma/Desktop/lab3/myjk_neg_verilog.v -lang verilog -prj lab3 -o myjk_neg_verilog.spl -module myjk_neg_verilog -template C:/Xilinx/14.7/ISE_DS/ISE//data/splveri.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3e -w myjk_neg_verilog.spl C:/Users/touma/Desktop/lab3/myjk_neg_verilog.sym 
+vhdtdtfi -lib work C:/Users/touma/Desktop/lab3/myjk_neg_verilog.v -lang verilog -prj lab3 -o myjk_neg_verilog.spl -module myjk_neg_verilog -template C:/Xilinx/14.7/ISE_DS/ISE//data/splveri.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3e -w myjk_neg_verilog.spl C:/Users/touma/Desktop/lab3/myjk_neg_verilog.sym 
+vhdtdtfi -lib work C:/Users/touma/Desktop/lab3/myjk_neg_verilog.v -lang verilog -prj lab3 -o myjk_neg_verilog.spl -module myjk_neg_verilog -template C:/Xilinx/14.7/ISE_DS/ISE//data/splveri.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3e -w myjk_neg_verilog.spl C:/Users/touma/Desktop/lab3/myjk_neg_verilog.sym 
+vhdtdtfi -lib work C:/Users/touma/Desktop/lab3/myjk_neg_verilog.v -lang verilog -prj lab3 -o myjk_neg_verilog.spl -module myjk_neg_verilog -template C:/Xilinx/14.7/ISE_DS/ISE//data/splveri.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3e -w myjk_neg_verilog.spl C:/Users/touma/Desktop/lab3/myjk_neg_verilog.sym 

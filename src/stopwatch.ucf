@@ -1,0 +1,19 @@
+NET "mclk"     LOC = "B8"; 
+
+NET "btn0"     LOC = "G12";
+NET "btn1"     LOC = "C11";
+NET "btn1" CLOCK_DEDICATED_ROUTE = FALSE;
+
+NET "seg(6)"     LOC = "L14";  #CA
+NET "seg(5)"     LOC = "H12";  #CB
+NET "seg(4)"     LOC = "N14";  #CC
+NET "seg(3)"     LOC = "N11";  #CD
+NET "seg(2)"     LOC = "P12";  #CE
+NET "seg(1)"     LOC = "L13";  #CF
+NET "seg(0)"     LOC = "M12";  #CG
+#NET "dp"     LOC = "N13";      #DP
+
+NET "an(0)"    LOC = "K14"; 
+NET "an(1)"    LOC = "M13"; 
+NET "an(2)"    LOC = "J12"; 
+NET "an(3)"    LOC = "F12"; 

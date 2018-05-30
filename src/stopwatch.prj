@@ -1,0 +1,8 @@
+verilog work "myjk_neg_verilog.v"
+verilog work "negedge_catcher.v"
+verilog work "LED_display.v"
+verilog work "clk_100ms.v"
+verilog work "bin2bcd.v"
+verilog work "bcd2seg.v"
+verilog work "an_gen.v"
+verilog work "stopwatch.vf"

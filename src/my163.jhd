@@ -1,0 +1,9 @@
+MODULE my163
+	SUBMODULE myjk_neg_verilog
+		INSTANCE JK1
+	SUBMODULE myjk_neg_verilog
+		INSTANCE JK2
+	SUBMODULE myjk_neg_verilog
+		INSTANCE JK3
+	SUBMODULE myjk_neg_verilog
+		INSTANCE JK4

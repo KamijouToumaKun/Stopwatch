@@ -1,0 +1,11 @@
+[Inputs]
+invK
+invCP
+invJ
+[Outputs]
+Q
+invQ
+[BiDir]
+[ATTRIBUTES]
+VeriModel myjk_neg_verilog
+

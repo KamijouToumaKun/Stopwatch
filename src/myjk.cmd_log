@@ -1,0 +1,7 @@
+sch2sym -intstyle ise -family spartan3e -refsym myjk C:/Users/touma/Desktop/lab3/myjk.sch C:/Users/touma/Desktop/lab3/myjk.sym 
+sch2sym -intstyle ise -family spartan3e -refsym myjk C:/Users/touma/Desktop/lab3/myjk.sch C:/Users/touma/Desktop/lab3/myjk.sym 
+sch2sym -intstyle ise -family spartan3e -refsym myjk C:/Users/touma/Desktop/lab3/myjk.sch C:/Users/touma/Desktop/lab3/myjk.sym 
+sch2sym -intstyle ise -family spartan3e -w -refsym myjk C:/Users/touma/Desktop/lab3/myjk.sch C:/Users/touma/Desktop/lab3/myjk.sym 
+sch2sym -intstyle ise -family spartan3e -w -refsym myjk C:/Users/touma/Desktop/lab3/myjk.sch C:/Users/touma/Desktop/lab3/myjk.sym 
+sch2hdl -intstyle ise -family spartan3e -verilog myjk_drc.vf -w C:/Users/touma/Desktop/lab3/myjk.sch 
+sch2sym -intstyle ise -family spartan3e -w -refsym myjk C:/Users/touma/Desktop/lab3/myjk.sch C:/Users/touma/Desktop/lab3/myjk.sym 
