@@ -1,0 +1,4 @@
+vhdtdtfi -lib work C:/Users/touma/Desktop/lab3/bin2bcd.v -lang verilog -prj lab3 -o bin2bcd.spl -module bin2bcd -template C:/Xilinx/14.7/ISE_DS/ISE//data/splveri.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3e -w bin2bcd.spl C:/Users/touma/Desktop/lab3/bin2bcd.sym 
+vhdtdtfi -lib work C:/Users/touma/Desktop/lab3/bin2bcd.v -lang verilog -prj lab3 -o bin2bcd.spl -module bin2bcd -template C:/Xilinx/14.7/ISE_DS/ISE//data/splveri.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3e -w bin2bcd.spl C:/Users/touma/Desktop/lab3/bin2bcd.sym 

@@ -1,0 +1,12 @@
+[Inputs]
+=an[3:0]=
+=seg3[6:0]=
+=seg2[6:0]=
+=seg1[6:0]=
+=seg0[6:0]=
+[Outputs]
+=seg[7:0]=
+[BiDir]
+[ATTRIBUTES]
+VeriModel LED_display
+

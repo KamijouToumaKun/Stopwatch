@@ -1,0 +1,2 @@
+vhdtdtfi -lib work C:/Users/touma/Desktop/lab3/bcd2seg.v -lang verilog -prj lab3 -o bcd2seg.spl -module bcd2seg -template C:/Xilinx/14.7/ISE_DS/ISE//data/splveri.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3e -w bcd2seg.spl C:/Users/touma/Desktop/lab3/bcd2seg.sym 

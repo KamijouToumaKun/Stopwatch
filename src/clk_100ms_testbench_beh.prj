@@ -1,0 +1,4 @@
+verilog work "myjk_neg_verilog.v"
+verilog work "myjk_neg_verilog.v" "clk_100ms.v"
+verilog work "myjk_neg_verilog.v" "clk_100ms_testbench.v"
+verilog work "C:/Xilinx/14.7/ISE_DS/ISE//verilog/src/glbl.v"
